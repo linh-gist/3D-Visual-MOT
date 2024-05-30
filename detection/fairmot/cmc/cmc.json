@@ -1,0 +1,15 @@
+{
+    "root":"D:\\dataset\\tracking\\CMC\\data\\images",
+    "train":
+    {
+        "cmc":"./data/cmc.train"
+    },
+    "test_emb":
+    {
+        "cmc":"./data/cmc.train"
+    },
+    "test":
+    {
+        "cmc":"./data/cmc.train"
+    }
+}
