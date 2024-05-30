@@ -1,0 +1,6 @@
+[submodule "cpp_ms_glmb_ukf/pybind11"]
+	path = cpp_ms_glmb_ukf/pybind11
+	url = https://github.com/pybind/pybind11.git
+[submodule "cpp_ms_glmb_ukf/EigenRand"]
+	path = cpp_ms_glmb_ukf/EigenRand
+	url = https://github.com/bab2min/EigenRand.git
