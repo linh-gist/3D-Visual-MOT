@@ -6,7 +6,9 @@ This is the official Python and C++ implementation repository for a paper entitl
 ![](assets/overview.png)
 
 ### Quick Overview
-We propose a 3D multi-object tracking (MOT) solution using only 2D detections from monocular cameras, which automatically initiates/terminates tracks as well as resolves track appearance-reappearance and occlusions. Moreover, this approach does not require detector retraining when cameras are reconfigured but only the camera matrices of reconfigured cameras need to be updated. Our approach is based on a Bayesian multi-object formulation that integrates track initiation/termination, re-identification, occlusion handling, and data association into a single Bayes filtering recursion. However, the exact filter that utilizes all these functionalities is numerically intractable due to the exponentially growing number of terms in the (multi-object) filtering density, while existing approximations trade-off some of these functionalities for speed. To this end, we develop a more efficient approximation suitable for online MOT by incorporating object features and kinematics into the measurement model, which improves data association and subsequently reduces the number of terms. Specifically, we exploit the 2D detections and extracted features from multiple cameras to provide a better approximation of the multi-object filtering density to realize the track initiation/termination and re-identification functionalities. Further, incorporating a tractable geometric occlusion model based on 2D projections of 3D objects on the camera planes realizes the occlusion handling functionality of the filter. Evaluation of the proposed solution on challenging datasets demonstrates significant improvements and robustness when camera configurations change on-the-fly, compared to existing multi-view MOT solutions. 
+- Our method tracks 3D objects using only 2D detections from monocular cameras without needing detector retraining.
+- Our approach maintains functionality despite camera reconfiguration by updating only the camera matrices for efficient online tracking.
+- Integrating object re-identification features and kinematics into our measurement model allows us to perform track re-identification in 3D from 2D detections. 
 
 ### Usage
 1. **Set Up Python Environment**
@@ -90,13 +92,12 @@ Linh Ma (linh.mavan@gm.gist.ac.kr), Machine Learning & Vision Laboratory, GIST, 
 If you find this project useful in your research, please consider citing by:
 
 ```
-@misc{linh2024inffus,
+@article{linh2024inffus,
       title={Track Initialization and Re-Identification for {3D} Multi-View Multi-Object Tracking}, 
       author={Linh Van Ma, Tran Thien Dat Nguyen, Ba-Ngu Vo, Hyunsung Jang, Moongu Jeon},
+      journal={Information Fusion},
       year={2024},
-      eprint={2405.18606},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+      publisher={Elsevier}
 }
 ```
 
