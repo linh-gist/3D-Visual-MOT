@@ -10,6 +10,9 @@ This is the official Python and C++ implementation repository for a paper entitl
 - Our approach maintains functionality despite camera reconfiguration by updating only the camera matrices for efficient online tracking.
 - Integrating object re-identification features and kinematics into our measurement model allows us to perform track re-identification in 3D from 2D detections. 
 
+### Docker image
+Docker image to run MV-GLMB-AB codes can be found in [Docker Hub](https://hub.docker.com/r/isplcurtin/mv-glmb-ab).
+
 ### Usage
 1. **Set Up Python Environment**
     - Create a `conda` Python environment and activate it:
@@ -96,6 +99,7 @@ If you find this project useful in your research, please consider citing by:
       title={Track Initialization and Re-Identification for {3D} Multi-View Multi-Object Tracking}, 
       author={Linh Van Ma, Tran Thien Dat Nguyen, Ba-Ngu Vo, Hyunsung Jang, Moongu Jeon},
       journal={Information Fusion},
+      volume = {111},
       year={2024},
       publisher={Elsevier}
 }
