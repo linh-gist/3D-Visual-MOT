@@ -11,5 +11,9 @@ INCLUDE_DIRECTORIES ( "${EIGEN3_INCLUDE_DIR}" )
 INCLUDE_DIRECTORIES ( "./EigenRand" )
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /arch:AVX2")
 
+# Set the C++ standard to C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 add_subdirectory(pybind11)
 pybind11_add_module(cppmsglmb src/main.cpp)
