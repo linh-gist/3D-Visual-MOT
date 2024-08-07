@@ -36,7 +36,7 @@ Docker image to run MV-GLMB-AB codes can be found in [Docker Hub](https://hub.do
 
 4. **Prepare Data**
     - Datasets: 
-        - CMC datasets (CMC1, CMC2, CMC3, CMC4, CMC5) can be download from [MEGA CLOUD, NZ](https://mega.nz/file/LKxAyZiT#wa-aMQmgk9guNkjj1olaPeUf-LgPS5P9iYBmZSLFnp8).
+        - CMC datasets (CMC1, CMC2, CMC3, CMC4, CMC5) can be download from [Google Drive](https://drive.google.com/file/d/1eliDg_DTHqgW10ww7aQWvicAwP3hlVEo/view?usp=sharing) or [MEGA CLOUD, NZ](https://mega.nz/file/LKxAyZiT#wa-aMQmgk9guNkjj1olaPeUf-LgPS5P9iYBmZSLFnp8).
         - WILDTRACK dataset is available  [EPFL CVLAB](https://www.epfl.ch/labs/cvlab/data/data-wildtrack/).
     - Folder structure:
         ```
