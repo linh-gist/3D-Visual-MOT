@@ -10,6 +10,11 @@ This is the official Python and C++ implementation repository for a paper entitl
 - Our approach maintains functionality despite camera reconfiguration by updating only the camera matrices for efficient online tracking.
 - Integrating object re-identification features and kinematics into our measurement model allows us to perform track re-identification in 3D from 2D detections. 
 
+### News
+- Our implementation for 2D multi-object tracking with re-identification is released at [VisualRFS](https://github.com/linh-gist/VisualRFS)
+- Our GLMB/LMB Python package implementations adapted from Matlab, are released at [labeledRFS](https://github.com/linh-gist/labeledRFS)
+
+
 ### Docker image
 Docker image to run MV-GLMB-AB codes can be found in [Docker Hub](https://hub.docker.com/r/isplcurtin/mv-glmb-ab).
 
