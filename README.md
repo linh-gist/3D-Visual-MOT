@@ -16,7 +16,7 @@ This is the official Python and C++ implementation repository for a paper entitl
 
 
 ### Docker image
-Docker image to run MV-GLMB-AB codes can be found in [Docker Hub](https://hub.docker.com/r/isplcurtin/mv-glmb-ab).
+Docker image to run MV-GLMB-AB codes can be found in [Docker Hub 3D-Visual-MOT](https://hub.docker.com/r/linhma/3dvisualmot) with [YouTube Demo](https://www.youtube.com/watch?v=A5qeugMHpLw) or [Docker Hub ISPLCurtin](https://hub.docker.com/r/isplcurtin/mv-glmb-ab).
 
 ### Usage
 1. **Set Up Python Environment**
@@ -27,7 +27,7 @@ Docker image to run MV-GLMB-AB codes can be found in [Docker Hub](https://hub.do
         ```
     - Clone this repository recursively to have EigenRand and pybind11**
         ```sh
-        git clone --recursive https://github.com/linh-gist/mv-glmb-ab.git
+        git clone --recursive https://github.com/linh-gist/3D-Visual-MOT.git
         ```
 
 2. **Install Packages**
