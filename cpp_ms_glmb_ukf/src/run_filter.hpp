@@ -404,13 +404,21 @@ private:
                     if (update_hypcmp_tmp(ivec, 0) < 0) { // check death target in only one sensor
                         off_vec.push_back(ivec);
                         stemp += avqs(tindices(ivec));
-                    } else if (update_hypcmp_tmp(ivec, 0) == 0) {
-                        not_off_vec.push_back(ivec);
-                        stemp += avps(tindices(ivec));
-                    } else { // >0
+                    } else {
                         not_off_vec.push_back(ivec);
                         stemp += avps(tindices(ivec));
                     }
+                }
+                // Restore from Gibbs indices to measurement indices
+                for (int s = 0; s < mModel.N_sensors; s++) {
+                    for (int i : not_off_vec) {
+                        if (update_hypcmp_tmp(i, s) > 0) {
+                            update_hypcmp_tmp(i, s) = mindices[s](update_hypcmp_tmp(i, s));
+                        }
+                    }
+                }
+
+                for (int ivec = 0; ivec < update_hypcmp_tmp.rows(); ivec++) {
                     for (int s = 0; s < update_hypcmp_tmp.cols(); s++) {
                         int mIndex = update_hypcmp_tmp(ivec, s); // measurement index
                         if (mIndex > 0) {
