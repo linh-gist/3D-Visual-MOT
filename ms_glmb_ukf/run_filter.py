@@ -343,6 +343,11 @@ class GLMB:  # delta GLMB
             for hidx in range(len(uasses)):
                 update_hypcmp_tmp = uasses[hidx]
                 off_idx = update_hypcmp_tmp[:, 0] < 0
+
+                # Restore from Gibbs indices to measurement indices
+                for s in range(model.N_sensors):
+                    update_hypcmp_tmp[~off_idx, s] = mindices[s][update_hypcmp_tmp[~off_idx, s]]
+
                 aug_idx = np.column_stack((tindices, update_hypcmp_tmp))  # [tindices, 1 + update_hypcmp_tmp]
                 mis_idx = update_hypcmp_tmp == 0
                 det_idx = update_hypcmp_tmp > 0
